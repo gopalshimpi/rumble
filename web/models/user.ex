@@ -5,6 +5,7 @@ use Rumbl.Web, :model
         field :username, :string
         field :password, :string, virtual: true
         field :password_hash, :string
+        has_many :videos, Rumbl.Video
         timestamps()
     end
     def changeset(model, params \\ %{}) do
